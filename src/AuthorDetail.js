@@ -3,7 +3,7 @@ import React, { Component } from "react";
 // Components
 import BookTable from "./BookTable";
 import Loading from "./Loading";
-
+import AddBookModal from "./AddBookModal";
 import { connect } from "react-redux";
 
 import * as actionCreators from "./store/actions/index";
@@ -30,6 +30,7 @@ class AuthorDetail extends Component {
             />
           </div>
           <BookTable books={author.books} />
+          <AddBookModal />
         </div>
       );
     }

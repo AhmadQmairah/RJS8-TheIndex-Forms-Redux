@@ -32,12 +32,12 @@ export const postAuthor = (newAuthor, closeModal) => {
     try {
       const res = await instance.post("/api/authors/", newAuthor);
       const author = res.data;
-      dispatch(resetErrors());
+      //dispatch(resetErrors());
       dispatch({
         type: actionTypes.POST_AUTHOR,
         payload: author
       });
-      dispatch(filterAuthors(""));
+      //dispatch(filterAuthors(""));
       closeModal();
     } catch (err) {
       dispatch({
